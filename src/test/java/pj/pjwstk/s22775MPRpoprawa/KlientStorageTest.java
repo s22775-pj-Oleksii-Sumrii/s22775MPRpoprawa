@@ -22,8 +22,7 @@ class KlientStorageTest {
 
         assertEquals(1000, klientStorage.getKlient("Alex"));
 
-        Klient updatedKlient = klientStorage.odliczSaldo("Alex", 50.0);
-
-        assertEquals(950.0, updatedKlient.getBalance());
+        Klient klient1 = klientStorage.odliczSaldo("Alex", 50.0);
+        assertEquals(950.0, klient1.getBalance());
     }
 }
