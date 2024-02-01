@@ -12,6 +12,6 @@ class ProductStorageTest {
         Products products = new Products("beer", 10);
         productStorage.addProducts(products);
 
-        assertEquals(products, productStorage.getProducts("beer"));
+        assertEquals(products, productStorage.findByProducts("beer"));
     }
 }

@@ -10,7 +10,7 @@ public class SklepService {
         List<Products> productsList = productStorage.getProductsList();
         if (!productsList.isEmpty()) {
             Products products = productsList.get(0);
-            if (amount >= klientStorage.getKlient(name).getBalance()){
+            if (amount >= klientStorage.findByKlient(name).getBalance()){
                 return klientStorage.odliczSaldo(name,amount);
             }
             System.out.println("Nie ma tyle na koncie");

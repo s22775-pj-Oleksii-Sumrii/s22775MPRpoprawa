@@ -11,7 +11,7 @@ class KlientStorageTest {
         Klient klient = new Klient("Alex", 1000);
         klientStorage.addKlient(klient);
 
-        assertEquals(klient, klientStorage.getKlient("Alex"));
+        assertEquals(klient, klientStorage.findByKlient("Alex"));
     }
 
     @Test
@@ -20,7 +20,7 @@ class KlientStorageTest {
         Klient klient = new Klient("Alex", 1000);
         klientStorage.addKlient(klient);
 
-        assertEquals(1000, klientStorage.getKlient("Alex"));
+        assertEquals(1000, klientStorage.findByKlient("Alex"));
 
         Klient klient1 = klientStorage.odliczSaldo("Alex", 50.0);
         assertEquals(950.0, klient1.getBalance());

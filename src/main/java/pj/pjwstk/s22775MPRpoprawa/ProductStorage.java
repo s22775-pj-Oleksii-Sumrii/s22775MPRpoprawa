@@ -18,7 +18,7 @@ public class ProductStorage {
         productsList.remove(products);
     }
 
-    public Products getProducts (String name){
+    public Products findByProducts (String name){
         for(Products products : productsList){
             if(products.getName().equals(name)){
                 return products;

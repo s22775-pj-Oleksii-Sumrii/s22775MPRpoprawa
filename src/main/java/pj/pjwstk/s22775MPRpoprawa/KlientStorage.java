@@ -18,7 +18,7 @@ public class KlientStorage {
         klientList.remove(klient);
     }
 
-    public Klient getKlient(String name) {
+    public Klient findByKlient(String name) {
         for (Klient klient : klientList) {
             if (klient.getName().equals(name)) {
                 return klient;
@@ -28,7 +28,7 @@ public class KlientStorage {
     }
 
     public Klient odliczSaldo(String name, double amount) {
-        Klient klient = getKlient(name);
+        Klient klient = findByKlient(name);
         klient.setBalance(klient.getBalance() - amount);
         return klient;
     }
